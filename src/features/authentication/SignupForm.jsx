@@ -42,7 +42,7 @@ function SignupForm() {
       </FormRow>
 
       <FormRow
-        label="Password (min 8 characters)"
+        label="New Password (min 8 char)"
         error={errors?.password?.message}
       >
         <Input
