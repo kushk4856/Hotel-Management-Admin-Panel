@@ -35,6 +35,8 @@ const Heading = styled.h1`
       text-align: center;
     `}
 
+    
+
   line-height: 1.4;
 `;
 

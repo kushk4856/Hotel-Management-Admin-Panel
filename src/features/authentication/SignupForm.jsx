@@ -77,7 +77,7 @@ function SignupForm() {
         <Button variation="secondary" type="reset" disabled={isLoading}>
           Cancel
         </Button>
-        <Button disabled={isLoading}>Create new user</Button>
+        <Button disabled={isLoading}>Create user</Button>
       </FormRow>
     </Form>
   );

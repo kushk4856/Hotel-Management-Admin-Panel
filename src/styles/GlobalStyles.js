@@ -33,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
   --color-red-700: #b91c1c;
   --color-red-800: #991b1b;
 
-  --backdrop-color: rgba(255, 255, 255, 0.1);
+  --backdrop-color: rgba(255, 255, 255, 0.5);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.06);
@@ -77,7 +77,7 @@ const GlobalStyles = createGlobalStyle`
 --color-red-700: #b91c1c;
 --color-red-800: #991b1b;
 
---backdrop-color: rgba(0, 0, 0, 0.3);
+--backdrop-color: rgba(0, 0, 0, 0.5);
 
 --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
 --shadow-md: 0px 0.6rem 2.4rem rgba(0, 0, 0, 0.3);
@@ -120,6 +120,8 @@ html {
   font-size: 62.5%;
 }
 
+
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--color-grey-700);
@@ -129,6 +131,15 @@ body {
   line-height: 1.5;
   font-size: 1.6rem;
 }
+
+.overflow-scroll{
+    overflow-x: auto !important;
+
+  }
+
+  .menuToggle{
+    display: none;
+  }
 
 input,
 button,
@@ -185,12 +196,63 @@ h6 {
   hyphens: auto;
 }
 
+/* .foo{
+  color: aqua;
+} */
+
 img {
   max-width: 100%;
 
   /* For dark mode */
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
+
+@media only screen and (max-width: 768px) {
+  html{
+    font-size: 55.5%;
+  }
+
+  .recharts-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recharts-surface{
+    width: 100% !important;
+  }
+
+.recharts-responsive-container{
+  width:  84vw !important;
+}
+
+  .recharts-legend-wrapper{
+    display: none;
+  }
+
+  .stat-value{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .no-wrap{
+    white-space: nowrap;
+  }
+
+  
+
+  .lggeqh{
+    padding-inline: 0px;
+  }
+  h1{
+    font-size: 2.4rem !important;
+  }
+
+  .menuToggle{
+    display: block;
+  }
+  }
 `;
 
 export default GlobalStyles;

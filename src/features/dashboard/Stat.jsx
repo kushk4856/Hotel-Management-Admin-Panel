@@ -13,6 +13,10 @@ const StyledStat = styled.div`
   grid-template-rows: auto auto;
   column-gap: 1.6rem;
   row-gap: 0.4rem;
+
+  @media only screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 const Icon = styled.div`
@@ -52,8 +56,10 @@ function Stat({ icon, title, value, color }) {
   return (
     <StyledStat>
       <Icon color={color}>{icon}</Icon>
-      <Title>{title}</Title>
-      <Value>{value}</Value>
+      <div className="stat-value">
+        <Title>{title}</Title>
+        <Value>{value}</Value>
+      </div>
     </StyledStat>
   );
 }

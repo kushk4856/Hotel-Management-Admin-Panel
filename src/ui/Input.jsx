@@ -6,6 +6,11 @@ const Input = styled.input`
   border-radius: var(--border-radius-sm);
   box-shadow: var(--shadow-sm);
   /* font-size: 21px; */
+
+  @media only screen and (max-width: 768px) {
+    width: 85%;
+    /* font-size: 16px; */
+  }
 `;
 
 export default Input;

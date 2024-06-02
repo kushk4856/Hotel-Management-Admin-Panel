@@ -28,7 +28,9 @@ const Header = styled.header`
   color: #e0e7ff;
   font-size: 1.8rem;
   font-weight: 500;
+  gap: 1.2rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 
@@ -59,6 +61,7 @@ const Section = styled.section`
 const Guest = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.2rem;
   margin-bottom: 1.6rem;
   color: var(--color-grey-500);
@@ -145,10 +148,12 @@ function BookingDataBox({ booking }) {
           <p>
             {guestName} {numGuests > 1 ? `+ ${numGuests - 1} guests` : ""}
           </p>
-          <span>&bull;</span>
-          <p>{email}</p>
-          <span>&bull;</span>
-          <p>National ID {nationalID}</p>
+          <p>
+            <span>&bull;</span> <span>{email}</span>
+          </p>
+          <p>
+            <span>&bull;</span> <span>National ID {nationalID}</span>
+          </p>
         </Guest>
 
         {observations && (

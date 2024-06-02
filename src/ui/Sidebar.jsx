@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
@@ -11,9 +12,13 @@ const StyledSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
-const Sidebar = () => {
+const Sidebar = ({ menu }) => {
   return (
     <StyledSidebar>
       <Logo />

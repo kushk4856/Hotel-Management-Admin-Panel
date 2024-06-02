@@ -12,16 +12,20 @@ import {
   YAxis,
 } from "recharts";
 import { useDarkMode } from "../../context/DarkModeContext";
-import { eachDayOfInterval, isSameDay, subDays } from "date-fns";
-import { format } from "url";
+import { eachDayOfInterval, formatDate, isSameDay, subDays } from "date-fns";
 
 const StyledSalesChart = styled(DashboardBox)`
   grid-column: 1 / -1;
+  overflow: hidden;
 
   /* Hack to change grid line colors */
   & .recharts-cartesian-grid-horizontal line,
   & .recharts-cartesian-grid-vertical line {
     stroke: var(--color-grey-300);
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0.4rem;
   }
 `;
 
@@ -35,7 +39,7 @@ const SalesChart = ({ bookings, numDays }) => {
 
   const data = allDates.map((date) => {
     return {
-      label: format(date, "MMM dd"),
+      label: formatDate(date, "MMM dd"),
       totalSales: bookings
         .filter((booking) => isSameDay(date, new Date(booking.created_at)))
         .reduce((acc, cur) => acc + cur.totalPrice, 0),
@@ -58,10 +62,12 @@ const SalesChart = ({ bookings, numDays }) => {
         text: "#374151",
         background: "#fff",
       };
-
   return (
     <StyledSalesChart>
-      <Heading as="h2">Sales</Heading>
+      <Heading as="h2">
+        Sales from {formatDate(allDates.at(0), "MMM dd yyyy")} {"  "}
+        to {formatDate(allDates.at(-1), "MMM dd yyyy")}
+      </Heading>
 
       <ResponsiveContainer height={300} width={"100%"}>
         <AreaChart data={data}>

@@ -9,6 +9,15 @@ const StyledFormRow = styled.div`
 
   padding: 1.2rem 0;
 
+  @media only screen and (max-width: 768px) {
+    display: flex;
+
+    padding-inline: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
   &:first-child {
     padding-top: 0;
   }
@@ -25,11 +34,20 @@ const StyledFormRow = styled.div`
     display: flex;
     justify-content: flex-end;
     gap: 1.2rem;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 `;
 
 const Label = styled.label`
   font-weight: 500;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const Error = styled.span`

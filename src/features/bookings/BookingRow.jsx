@@ -80,7 +80,7 @@ function BookingRow({
         <span>{email}</span>
       </Stacked>
 
-      <Stacked>
+      <Stacked className="">
         <span>
           {isToday(new Date(startDate))
             ? "Today"

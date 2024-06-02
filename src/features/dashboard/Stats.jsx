@@ -15,7 +15,9 @@ const Stats = ({ bookings, confirmedStays, numDays, cabinCount }) => {
   const sales = bookings.reduce((acc, cur) => acc + cur.totalPrice, 0);
 
   //3.
-  const checkins = confirmedStays.length;
+  const checkins = confirmedStays.filter(
+    (booking) => booking.status === "checked-in"
+  ).length;
 
   //4.
   const occupation =

@@ -5,9 +5,9 @@ export const guests = [
     // id: 1000,
     fullName: "Kush Kumar",
     email: "kushkumar@kumar.io",
-    nationality: "Portugal",
+    nationality: "United States of America",
     nationalID: "3525436345",
-    countryFlag: "https://flagcdn.com/pt.svg",
+    countryFlag: "https://flagcdn.com/us.svg",
   },
   {
     fullName: "Karan Singh",
@@ -18,7 +18,7 @@ export const guests = [
   },
   {
     fullName: "Jonatan Johansson",
-    email: "jonatan@example.com",
+    email: "manjon@example.com",
     nationality: "Finland",
     nationalID: "9374074454",
     countryFlag: "https://flagcdn.com/fi.svg",

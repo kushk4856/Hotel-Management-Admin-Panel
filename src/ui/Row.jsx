@@ -8,6 +8,7 @@ const Row = styled.div`
     css`
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     `}
   ${(props) =>
     props.type === "vertical" &&
@@ -15,6 +16,19 @@ const Row = styled.div`
       flex-direction: column;
       gap: 1.6rem;
     `}
+
+  
+   
+
+  /* @media only screen and (max-width: 768px) {
+    flex-direction: row;
+    gap: 1.6rem;
+  } */
+
+  @media only screen and (max-width: 426px) {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 `;
 
 Row.defaultProps = { type: "vertical" };

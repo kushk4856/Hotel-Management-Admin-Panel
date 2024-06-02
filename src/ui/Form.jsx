@@ -17,7 +17,16 @@ const Form = styled.form`
     css`
       width: 80rem;
     `}
-    
+
+
+    @media only screen and (max-width: 768px) {
+    width: 70vw;
+    align-self: center;
+  }
+  @media only screen and (max-width: 426px) {
+    width: 100%;
+  }
+
   overflow: hidden;
   font-size: 1.4rem;
 `;
