@@ -24,7 +24,7 @@ const Form = styled.form`
     align-self: center;
   }
   @media only screen and (max-width: 426px) {
-    width: 100%;
+    width: 95%;
   }
 
   overflow: hidden;

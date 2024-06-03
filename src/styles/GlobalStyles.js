@@ -209,7 +209,7 @@ img {
 
 @media only screen and (max-width: 768px) {
   html{
-    font-size: 55.5%;
+    font-size: 62.5%;
   }
 
   .recharts-wrapper{
@@ -252,6 +252,13 @@ img {
   .menuToggle{
     display: block;
   }
+  }
+
+
+  @media only screen and (max-width: 426px) {
+    html{
+      font-size: 55.2%;
+    }
   }
 `;
 
