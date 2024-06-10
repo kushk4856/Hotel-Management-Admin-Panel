@@ -13,6 +13,10 @@ const StyledStat = styled.div`
   grid-template-rows: auto auto;
   column-gap: 1.6rem;
   row-gap: 0.4rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem; */
 
   @media only screen and (max-width: 768px) {
     justify-content: space-between;
