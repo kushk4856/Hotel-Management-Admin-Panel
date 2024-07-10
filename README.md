@@ -2,7 +2,9 @@
 
 <h2>Description:</h2>
 
-This React application is a hotel management admin panel that allows hotel employees to manage cabins, bookings, guests, and application settings.
+This React application is a hotel management admin panel that allows hotel employees to manage cabins, bookings, guests, and application setting.
+
+<h2><a href="https://kush-hotel-management-admin-panel.netlify.app">Live Link</a> </h2>
 
 <h2>Tech Stack:</h2>
 
